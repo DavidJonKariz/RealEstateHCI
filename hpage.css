@@ -1,0 +1,482 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+/*CSS for the parallax*/
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
+  color: #666;
+}
+
+.pimg1,
+.pimg2,
+.pimg3 {
+  position: relative;
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*
+		Fixed = Parallax
+		Scroll = Normal
+	*/
+  background-attachment: fixed;
+}
+
+.pimg1 {
+  background-image: url("pics/maxresdefault.jpg"); 
+  min-height: 100%;
+}
+
+.pimg2 {
+  background-image: url("pics/4-bedroom-house-sale-gated-compound-off-Fair-Acres-road-Langata_1.jpg");
+  min-height: 400px;
+}
+
+.pimg3 {
+  background-image: url("pics/Kenya_land_market.jpg");
+  min-height: 400px;
+}
+
+.section {
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.section-dark {
+  background-color: #282e34;
+  color: #ddd;
+  opacity: 0.7;
+}
+.section-light {
+  background-color: #f4f4f4f4;
+  color: #666;
+  opacity: 0.7;
+}
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.ptext .border {
+  background-color: #111;
+  color: white;
+  padding: 20px;
+}
+
+.ptext .border.trans {
+  background-color: transparent;
+}
+
+@media (max-width: 568px) {
+  .pimg1,
+  .pimg2,
+  .pimg3 {
+    background-attachment: scroll;
+  }
+}
+
+
+/*CSS for the navigation bar*/
+#menu-nav {
+  max-width: 1000px;
+  margin: 30px auto;
+  margin-top: -200px;
+  background-color: #ecf0f1;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#navigation-bar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+#navigation-bar li {
+  float: left;
+  width: 20%;
+}
+#navigation-bar li:hover a::before {
+  right: 0;
+  left: 0;
+}
+#navigation-bar a {
+  color: #848484;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px 0;
+  display: block;
+  position: relative;
+  transition: all 0.3s ease;
+}
+#navigation-bar a:hover {
+  color: #e74c3c;
+}
+#navigation-bar a::before {
+  content: "";
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+  right: 50%;
+  left: 50%;
+  bottom: 0;
+  height: 2px;
+  background-color: #e74c3c;
+}
+#navigation-bar a:hover::before {
+  right: 0;
+  left: 0;
+}
+#navigation-bar span {
+  display: block;
+}
+
+#search-bar {
+  display: none;
+  border-bottom: 3px solid #e74c3c;
+  border-radius: 4px;
+}
+
+/*form {
+  width: 90%;
+  margin: 10px auto;
+}*/
+
+input {
+  width: 100%;
+  padding: 10px 5%;
+  text-align: center;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #e74c3c;
+  font: normal 300 18px "Roboto", sans-serif;
+  color: #888;
+  transition: box-shadow 0.5s ease;
+}
+input:focus, input:active {
+  box-shadow: 0 0 10px #e74c3c;
+}
+
+
+
+/*css for the flexbox*/
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+/*First Flexbox*/
+.container .item {
+  display: grid;
+/*  margin: auto;*/
+  position: relative;
+  flex: 1;
+  text-align: center;
+  color: white;
+  transition: .9s;
+  max-width: 65%;
+  height: 50vh;
+  min-width: 40%;
+  margin-top: -35pt;
+  margin-bottom: -35pt;
+/*  margin-right: -35pt;
+  margin-left: -35pt;*/
+  background-color: rgba(34, 34, 34, 0.4);
+}
+.container .item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center bottom;
+  background-size: cover;
+  z-index: -1;
+}
+.container .item:nth-of-type(odd):before {
+  background-image: url("pics/maxresdefault (1).jpg");
+}
+.container .item:nth-of-type(even):before {
+  background-image: url("pics/maxresdefault (2).jpg");
+}
+.container .item:hover {
+  transition: .5s;
+  max-width: 75% !important;
+  flex-grow: 1.5;
+  cursor: pointer;
+  color: #fff;
+  margin-right: -51dp;
+  margin-left: -51dp;
+  background-color: rgba(0, 0, 255, 0.3);
+}
+.container .item:hover p {
+  -webkit-transform: none;
+          transform: none;
+  transition: .5s;
+}
+/*Second Flexbox*/
+.container .itemz {
+  display: grid;
+/*  margin: auto;*/
+  position: relative;
+  flex: 1;
+  text-align: center;
+  color: white;
+  transition: .9s;
+  max-width: 65%;
+  height: 50vh;
+  min-width: 40%;
+  margin-top: -35pt;
+  margin-bottom: -35pt;
+/*  margin-right: -35pt;
+  margin-left: -35pt;*/
+  background-color: rgba(34, 34, 34, 0.4);
+}
+.container .itemz:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center bottom;
+  background-size: cover;
+  z-index: -1;
+}
+.container .itemz:nth-of-type(odd):before {
+  background-image: url("pics/0.-Agricultural-land-for-sale-in-Mai-Mahiu-Kenya.jpg");
+}
+.container .itemz:nth-of-type(even):before {
+  background-image: url("pics/d9aca9f7-6f8d-46f3-a61f-e270ddb58193-0.jpg");
+}
+.container .itemz:hover {
+  transition: .5s;
+  max-width: 75% !important;
+  flex-grow: 1.5;
+  cursor: pointer;
+  color: #fff;
+  margin-right: -51dp;
+  margin-left: -51dp;
+  background-color: rgba(0, 0, 255, 0.3);
+}
+.container .itemz:hover p {
+  -webkit-transform: none;
+          transform: none;
+  transition: .5s;
+}
+.container .content {
+  margin: auto;
+  font-size: 2em;
+}
+.container p {
+  -webkit-transform: translateY(120vh);
+          transform: translateY(120vh);
+}
+
+
+/*CSS for the pop up*/
+/*.fancy-btn {
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: relative;
+  top: 50%;
+  display: block;
+  min-width: 10%;
+  line-height: 55px;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  padding: 0 10px;
+  background-color: #F2594B;
+  color: #FFF;
+  border-radius: 3px;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.fancy-btn:hover {
+  background-color: #f46f63;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 40;
+  -moz-transition: opacity 0.25s ease 0s, visibility 0.35s linear;
+  -o-transition: opacity 0.25s ease 0s, visibility 0.35s linear;
+  -webkit-transition: opacity 0.25s ease, visibility 0.35s linear;
+  -webkit-transition-delay: 0s, 0s;
+  transition: opacity 0.25s ease 0s, visibility 0.35s linear;
+}
+.modal-overlay.state-show {
+  opacity: .7;
+  visibility: visible;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -moz-transition-duration: 0.2s, 0s;
+  -o-transition-duration: 0.2s, 0s;
+  -webkit-transition-duration: 0.2s, 0s;
+  transition-duration: 0.2s, 0s;
+}
+
+.modal-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 50;
+       display: table; 
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -moz-box-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  width: 100%;
+  text-align: center;
+  visibility: hidden;
+}
+.modal-frame.state-appear {
+  visibility: visible;
+}
+.modal-frame.state-appear .modal-inset {
+  -moz-animation: modalComeIn 0.25s ease;
+  -webkit-animation: modalComeIn 0.25s ease;
+  animation: modalComeIn 0.25s ease;
+  visibility: visible;
+   to keep @ final state 
+}
+.modal-frame.state-appear .modal-body {
+  opacity: 1;
+  -moz-transform: translateY(0) scale(1, 1);
+  -ms-transform: translateY(0) scale(1, 1);
+  -webkit-transform: translateY(0) scale(1, 1);
+  transform: translateY(0) scale(1, 1);
+}
+.modal-frame.state-leave {
+  visibility: visible;
+}
+.modal-frame.state-leave .modal-inset {
+  -moz-animation: modalHeadOut 0.35s ease 0.1s;
+  -webkit-animation: modalHeadOut 0.35s ease 0.1s;
+  animation: modalHeadOut 0.35s ease 0.1s;
+  visibility: visible;
+}
+.modal-frame.state-leave .modal-body {
+  opacity: 0;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -moz-transition-duration: 0.35s;
+  -o-transition-duration: 0.35s;
+  -webkit-transition-duration: 0.35s;
+  transition-duration: 0.35s;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -moz-transform: translateY(25px);
+  -ms-transform: translateY(25px);
+  -webkit-transform: translateY(25px);
+  transform: translateY(25px);
+}
+
+@-moz-document url-prefix() {
+  .modal-frame {
+    height: calc(100% - 55px);
+  }
+}
+.modal {
+  display: block;
+  vertical-align: middle;
+  text-align: center;
+}
+.modal-inset .close {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0;
+  opacity: .4;
+}
+.modal-inset .close:hover {
+  opacity: 1;
+}
+
+@-webkit-keyframes modalComeIn {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    -moz-transform: scale(0.8, 0.8);
+    -ms-transform: scale(0.8, 0.8);
+    -webkit-transform: scale(0.8, 0.8);
+    transform: scale(0.8, 0.8);
+  }
+  65.5% {
+    -moz-transform: scale(1.03, 1.03);
+    -ms-transform: scale(1.03, 1.03);
+    -webkit-transform: scale(1.03, 1.03);
+    transform: scale(1.03, 1.03);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes modalHeadOut {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    -moz-transform: translateY(0) scale(1, 1);
+    -ms-transform: translateY(0) scale(1, 1);
+    -webkit-transform: translateY(0) scale(1, 1);
+    transform: translateY(0) scale(1, 1);
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    -moz-transform: translateY(35px) scale(0.97, 0.97);
+    -ms-transform: translateY(35px) scale(0.97, 0.97);
+    -webkit-transform: translateY(35px) scale(0.97, 0.97);
+    transform: translateY(35px) scale(0.97, 0.97);
+  }
+}*/

@@ -1,0 +1,99 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+header{
+	background-color: #F8f8f8;
+	padding-left: 10px;
+}
+header ul{
+	margin: 0;
+}
+
+header a, header li{
+	padding: 1.4rem 0;
+	color: #777;
+	font-weight: bold;
+}
+
+section #intro-header{
+	border-bottom: solid 0.5px rgb(40,161,80);
+	margin-bottom: 5px;
+	height: 400px;
+}
+
+section #intro-header .wrap-headline{
+	position: relative;
+	padding-top: 20%;
+	padding-bottom: 20%;
+}
+
+section #intro-header h1, section #intro-header h2{
+	color: #fff;
+}
+
+section #intro-header h2{
+	font-size: 1.5rem;
+}
+
+section #intro-header hr{
+	background-color: rgba(255, 255, 255, 0.5);
+	border: none;
+}
+
+
+div.scroll-horizontal-1 {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+div.scroll-horizontal-1 a {
+    display: inline-block;
+    text-align: left;
+    padding: 14px;
+    text-decoration: none;
+    color: green;
+    border-right: 1px solid green;
+    margin: 5px;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.scroll-horizontal-1 img{
+	margin: 5px;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+div.scroll-horizontal-1 a button{
+	color: white;
+	background-color: rgba(255, 255, 255, 0.5)
+}
+div.scroll-horizontal-1 a button:hover{
+	text-decoration: underline;	
+}
+
+footer{
+	background-color: #191919;
+	color: #ADADAD;
+	margin-top: 3em;
+	bottom: 0;
+	position: relative;
+	width: 100%;
+}
+
+footer h5{
+	margin-top: 5em;
+	font-weight: bold;
+}
+footer ul{
+	margin-bottom: 5em;
+}
+footer a{
+	font-weight: 300;
+	color: #5a5a5a;
+}
+footer a:hover{
+	text-decoration: none;
+	color: #fff;
+}
